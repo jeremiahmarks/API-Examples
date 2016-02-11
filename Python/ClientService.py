@@ -30,7 +30,7 @@ class ClientServiceCalls:
 
     def AddCreditCardToClient(self, clientId, cc):
         """A consumer method for adding a credit card to a client's information.
-           Note that adding a credit card in particular requires a secure connection 
+           Note that adding a credit card in particular requires a secure connection
            (https url) when setting up your service."""
         result = ClientServiceMethods().AddCreditCardToClient(clientId, cc)
         print str(result)
@@ -47,8 +47,8 @@ class ClientServiceCalls:
                                  state,
                                  postalCode):
         """A consumer method for adding a new or default credit card
-           to a client's information. Note that adding a credit card 
-           in particular requires a secure connection (https url) when 
+           to a client's information. Note that adding a credit card
+           in particular requires a secure connection (https url) when
            setting up your service."""
         result = ClientServiceMethods().CreateAndAddCreditCardToClient(clientId,
                                                                        cardType,
@@ -150,7 +150,7 @@ class ClientServiceCalls:
 
     def GetAllClients(self):
         result = ClientServiceMethods().GetAllClients()
-        print str(result)
+        return result
 
     def GetClientsByString(self, searchStr):
         result = ClientServiceMethods().GetClientsByString(searchStr)
@@ -348,7 +348,7 @@ class ClientServiceMethods:
     """AddOrUpdateContactLogs methods"""
 
     def UpdateContactLogText(self, clientId, text):
-        """This method will change the text of every contact log 
+        """This method will change the text of every contact log
            applied to clientId in the past year to text."""
         request = self.CreateBasicRequest("AddOrUpdateContactLogs")
 

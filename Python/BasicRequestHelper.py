@@ -2,11 +2,13 @@
    Much of the abstracted logic such as filling out credential objects and arrays
    resides in this class."""
 
-SOURCE_NAME = ""
-SOURCE_PASSWORD = ""
+import pw_ as pw
 
-USER_NAME = ""
-USER_PASSWORD = ""
+SOURCE_NAME = pw.sourcename
+SOURCE_PASSWORD = pw.password
+
+USER_NAME = pw.uname
+USER_PASSWORD = pw.upass
 
 SITE_IDS = [-99]
 
